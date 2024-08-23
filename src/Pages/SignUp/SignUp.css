@@ -1,0 +1,82 @@
+.main-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.signup-card {
+    height: 85vh;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 1rem;
+}
+
+.signup-left-card {
+    height: 85vh;
+    align-items: center;
+    flex: 1;
+    background-color: #fff;
+}
+
+.main-content {
+    padding-top: 20;
+}
+
+.signup-right-card {
+    /* background-color: var(--theme-primary-color); */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/003/689/228/original/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg');
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.divider {
+    position: relative;
+}
+
+.divider .line {
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.divider .text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline;
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: gray;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    border-bottom: 2px solid #007bff;
+    outline: none;
+}
