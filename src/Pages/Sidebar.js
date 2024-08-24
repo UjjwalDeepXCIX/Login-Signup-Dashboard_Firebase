@@ -9,14 +9,24 @@ import {
   LoginOutlined,
   SettingOutlined,
 } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const { Sider } = Layout;
 
 const Sidebar = ({ collapsed, setCollapsed, onLogout }) => {
+  const navigate = useNavigate(); // Initialize navigate function
+
+  const handleProfileClick = () => {
+    navigate('/profile'); // Navigate to profile page
+  };
+  const handleDashboardClick = () => {
+    navigate('/dashboard'); // Navigate to profile page
+  };
+
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
       <Menu theme="dark" mode="inline">
-        <Menu.Item key="1" icon={<HomeOutlined />}>
+        <Menu.Item key="1" icon={<HomeOutlined />}onClick={handleDashboardClick}>
           Dashboards
         </Menu.Item>
         <Menu.SubMenu key="sub1" icon={<AppstoreAddOutlined />} title="Apps">
@@ -30,7 +40,7 @@ const Sidebar = ({ collapsed, setCollapsed, onLogout }) => {
         <Menu.Item key="5" icon={<FireOutlined />}>
           Hot
         </Menu.Item>
-        <Menu.Item key="6" icon={<UserOutlined />}>
+        <Menu.Item key="6" icon={<UserOutlined />} onClick={handleProfileClick}>
           Profile
         </Menu.Item>
         <Menu.Item key="7" icon={<LoginOutlined />} onClick={onLogout}>

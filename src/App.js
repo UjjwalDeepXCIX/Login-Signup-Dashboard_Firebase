@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Pages/Login/Login';
 import Signup from './Pages/SignUp/SignUp';
 import Logout from './Pages/Logout/Logout'; // Import the Logout component
+import Profile from './Pages/Profile/Profile';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
               <Route path="/" element={<Login />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/logout" element={<Logout />} /> {/* Add the Logout route */}
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </main>
         </div>
